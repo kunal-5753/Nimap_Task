@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<h2>All Users</h2>
+
+<ul>
+    {% for item in userlist %}
+        <li>
+            <strong>User ID: {{ item.id }}</strong>
+            <ul>
+                <li>User_name: {{ item.user_name }}</li>
+                <li>Name: {{ item.name }}</li>
+                <li>Email: {{ item.email }}</li>
+                <li>Contact: {{ item.contact }}</li>
+            </ul>
+        </li>
+    {% empty %}
+        <h3>No User available.</h3>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

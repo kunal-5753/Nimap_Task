@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create client</title>
+</head>
+<body>
+    
+    <form action="create_new_client" method = 'Post'>
+        <h2>Enter Client Details</h2>
+        <br>
+        {% csrf_token %}
+        Client_ID: <input type="int" name="clid"><br>
+        Client_Name: <input type="text" name="clname"><br>
+        Created_at: <input type="date" name="clcrat"><br>
+        Created_by: <input type="text" name="clcrby"><br>
+        <br>
+        <input type="Submit"> 
+    </form> 
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients Page</title>
+</head>
+<body>
+   <h1>Client Access</h1>
+
+    <form action="create_new_client">
+        <h2>Register a new client</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+     <br>
+     <form action="update_client">
+        <h2>Update a client</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+
+     <br>
+     <form action="get_clientby_id">
+        <h2>Get Client details</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+
+     <br>
+     <form action="get_all_clients" method = 'Post'>
+        <h2>Show all clients</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+
+     <br>
+     <form action="delete_client">
+        <h2>Delete client</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+     <br>
+     <a href="{% url 'home_page' %}"><button>Back to Home Page</button></a>
+</body>
+</html>
+{% endblock %}

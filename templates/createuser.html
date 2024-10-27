@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create user</title>
+</head>
+<body>
+    
+    <form action="create_new_user" method = 'Post'>
+        <h2>Enter User Details</h2>
+        <br>
+        {% csrf_token %}
+        User_ID: <input type="int" name="uid"><br>
+        User_name: <input type="text" name="uname"><br>
+        Name: <input type="text" name="name"><br>
+        Email: <input type="text" name="email"><br>
+        Contact: <input type="text" name="con"><br>
+        <br>
+        <input type="Submit"> 
+    </form> 
+
+</body>
+</html>
+{% endblock %}

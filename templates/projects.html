@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+</head>
+<body>
+    <h1>Projects Section</h1>
+
+    <form action="create_new_project">
+        <h2>Create project</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+
+     <br>
+     <form action="get_all_projects">
+        <h2>Show all projects</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+     <br>
+     <a href="{% url 'home_page' %}"><button>Back to Main Page</button></a>
+</body>
+</html>
+{% endblock %}

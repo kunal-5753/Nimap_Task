@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients Page</title>
+</head>
+<body>
+   <h1>User Access</h1>
+
+    <form action="create_new_user">
+        <h2>Register a new user</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+     <br>
+
+     <form action="get_all_user" method = 'Post'>
+        <h2>Show all users</h2>
+        {% csrf_token %}
+        <button>Click Here</button>
+     </form>
+
+     <br>
+     
+     <a href="{% url 'home_page' %}"><button>Back to Home Page</button></a>
+</body>
+</html>
+{% endblock %}

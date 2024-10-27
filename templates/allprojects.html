@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<h2>All Projects</h2>
+
+<ul>
+    {% for item in prolist %}
+        <li>
+            <strong>Project ID: {{ item.id }}</strong>
+            <ul>
+                <li>Project Name: {{ item.project_name }}</li>
+                <li>Created at: {{ item.created_at }}</li>
+                <li>Created by: {{ item.created_by }}</li>
+                <li>Client ID: {{ item.client_id }}</li>
+            </ul>
+        </li>
+    {% empty %}
+        <h3>No projects available.</h3>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

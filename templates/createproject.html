@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project</title>
+</head>
+<body>
+    
+    <form action="create_new_project" method = 'Post'>
+        <h2>Enter Project Info</h2>
+        {% csrf_token %}
+        Project_ID: <input type="int" name="plid"><br>
+        Project_Name: <input type="text" name="plname"><br>
+        Created_at: <input type="date" name="plcrat"><br>
+        Created_by: <input type="text" name="plcrby"><br>
+        Client_id: <input type="text" name="clid"><br>
+        <input type="Submit"> 
+    </form> 
+
+</body>
+</html>
+{% endblock %}

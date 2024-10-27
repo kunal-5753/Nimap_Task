@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%block content%}
+<body>
+    <h2>Update Client Details</h2>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    
+    <form action="update_client" method="POST">
+        {% csrf_token %}
+        <label for="client_id">Client ID:</label>
+        <input type="text" id="client_id" name="client_id" required>
+        
+        <label for="new_name">Client Name:</label>
+        <input type="text" id="new_name" name="new_name" required>
+        
+        {% comment %} <label for="new_name">Client Name:</label>
+        <input type="text" id="new_name" name="new_name" required>
+
+        <label for="new_name">Client Name:</label>
+        <input type="text" id="new_name" name="new_name" required> {% endcomment %}
+        <!-- Add other fields as necessary -->
+        
+        <button type="submit">Update Client</button>
+    </form>
+    
+</body>
+{% endblock %}

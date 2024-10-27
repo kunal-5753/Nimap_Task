@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block content%}
+<body>
+    <h2>Delete Client</h2>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    
+    <form action="delete_client" method="POST">
+        {% csrf_token %}
+        <label for="client_id">Client ID:</label>
+        <input type="text" id="client_id" name="client_id" required>
+        <button type="submit">Delete Client</button>
+    </form>
+
+</body>
+{% endblock %}

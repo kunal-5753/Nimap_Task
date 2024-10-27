@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to Home!!!</h1>
+    <br1>
+        <div>
+            <h2>User Section</h2>
+            <a href="{% url 'users_page' %}"><button>Go to Users</button></a>
+        </div>
+    <br>
+    <div>
+        <h2>Clients Section</h2>
+        <a href="{% url 'clients_page' %}"><button>Go to Clients</button></a>
+    </div>
+    <br>
+    <div>
+        <h2>Projects Section</h2>
+        <a href="{% url 'projects_page' %}"><button>Go to Projects</button></a>
+    </div>
+</body>
+</html>
+{% endblock %}

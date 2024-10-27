@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nimap Infotech: Innovative tech solutions for your business.">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Nimap Infotech</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom right, rgba(255, 229, 204, 0.9), rgba(204, 204, 255, 1));
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: left;
+        }
+
+        header {
+            background: #A8E6CF; /* Bright yellow */
+            padding: 20px 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            color: #333;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #FF7F7F /* Vibrant pink */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h2 {
+            line-height: 0;
+            font-size: 1.8em;
+            color: #4682B4
+        }
+        
+
+
+        li {
+            color: #7D3C98; /* Purple */
+        }
+
+        p {
+            color: #D35400; /* Orange */
+        }
+
+        .content {
+            background: #ffffff; 
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 650px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        p {
+            font-size: 0.8em;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            color: #4A90E2; /* Blue */
+        }
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 0.8em;
+            color: #fff;
+            background-color: #2ECC71; /* Green */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #27AE60; /* Darker green */
+            transform: scale(1.05); 
+        }
+        footer {
+            margin-top: 10px;
+            color: #555; 
+            font-size: 0.8em; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nimap Infotech</h1>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        <a href="#" class="button">Get Started</a>
+        <a href="#" class="button">Explore Services</a>
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nimap Infotech. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

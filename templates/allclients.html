@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<h2>All Clients</h2>
+
+<ul>
+    {% for item in li %}
+        <li>
+            <strong>Client ID: {{ item.id }}</strong>
+            <ul>
+                <li>Client Name: {{ item.client_name }}</li>
+                <li>Created at: {{ item.created_at }}</li>
+                <li>Created by: {{ item.created_by }}</li>
+            </ul>
+        </li>
+    {% empty %}
+    <h3>No clients available.</h3>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<h2>Client Detail</h2>
+
+<ul>
+    <li>
+            <strong>Client ID: {{ item.id }}</strong>
+            <ul>
+                <li>Client Name: {{ item.client_name }}</li>
+                <li>Created at: {{ item.created_at }}</li>
+                <li>Created by: {{ item.created_by }}</li>
+            </ul>
+        </li>
+
+</ul>
+
+
+{% endblock %}
