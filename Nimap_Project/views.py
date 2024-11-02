@@ -42,7 +42,6 @@ def create_new_client(request):
         client1.save()
         print('Client Added')
         return redirect('/')
-        # return render(request,'new.html',{'li':'Sucess'})
     else:
          return render(request,'createclient.html')
 
@@ -78,7 +77,7 @@ def delete_client(request):
             client1 = client.objects.get(id=tempid)
             client1.delete()
             return HttpResponse(status=204)
-            #return redirect('/')  # Redirect to the client list or another page
+            #return redirect('/')
         except client.DoesNotExist:
             messages.error(request, 'Client not found.')
 
