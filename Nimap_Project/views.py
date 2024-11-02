@@ -38,9 +38,8 @@ def create_new_client(request):
         client_name=request.POST['clname']
         created_at=request.POST['clcrat']
         created_by=request.POST['clcrby']
-        #Create object
         client1 = client(id=id, client_name=client_name, created_at=created_at, created_by=created_by)
-        client1.save()  # Save the instance to the database
+        client1.save()
         print('Client Added')
         return redirect('/')
         # return render(request,'new.html',{'li':'Sucess'})
@@ -50,13 +49,13 @@ def create_new_client(request):
 def update_client(request):
     if request.method == 'POST':
         tempid = request.POST.get('client_id')
-        new_name = request.POST.get('new_name')  # Add other fields as necessary
+        new_name = request.POST.get('new_name')
         try:
             client1 = client.objects.get(id=tempid)
-            client1.client_name = new_name  # Update other fields as necessary
+            client1.client_name = new_name
             client1.save()
             #messages.success(request, 'Client details updated successfully.')
-            return redirect('/')  # Redirect to the client list or another page
+            return redirect('/')
         except client.DoesNotExist:
             messages.error(request, 'Client not found.')
     
@@ -116,9 +115,9 @@ def create_new_user(request):
         name=request.POST['name']
         email=request.POST['email']
         contact=request.POST['con']
-        #Create object
+        
         user1 = User(id=id, user_name=user_name, name=name, email=email, contact=contact)
-        user1.save()  # Save the instance to the database
+        user1.save()
         print('User Added')
         return redirect('/')
     else:
